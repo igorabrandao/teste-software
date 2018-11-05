@@ -21,17 +21,27 @@ public class CalculoImpostoRendaTest
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][] 
 		{
-			/**
-			 * Case Tests
-			 * 
-			 * Note: they are located in "Casos de Teste" spreadsheet
-			 */
-			{1201, 1321.10},		// Case-Test-id: 1
-			{5000, 5500},			// Case-Test-id: 2
-			{5001, 5751.15},		// Case-Test-id: 3
-			{10000, 11500},			// Case-Test-id: 4
-			{10001, 12001.2},		// Case-Test-id: 5
-			{900, 900},				// Case-Test-id: 6
+			// Limit values class 01 (0%)
+			{-1, -1},				// Case-Test-id: 1
+			{0, 0},					// Case-Test-id: 2
+			{1, 1},					// Case-Test-id: 2
+			{1200.99, 1200.99},		// Case-Test-id: 3
+			
+			// Limit values class 02 (10%)
+			{1201, 1321.10},		// Case-Test-id: 4
+			{1201.99, 1322.18},		// Case-Test-id: 5
+			{4999.99, 5499.98},		// Case-Test-id: 6
+			{5000, 5500},			// Case-Test-id: 7
+			
+			// Limit values class 03 (15%)
+			{5000.99, 5501.08},		// Case-Test-id: 8
+			{5001, 5751.15},		// Case-Test-id: 9
+			{9999.99, 11499.98},	// Case-Test-id: 10
+			{10000.99, 11501.13},	// Case-Test-id: 11
+			
+			// Limit values class 04 (20%)
+			{10001, 12001.2},		// Case-Test-id: 12
+			{10001.99, 12002.38},	// Case-Test-id: 13
 		});
 	}
 	
