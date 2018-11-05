@@ -13,7 +13,7 @@ public class CalculoImpostoRenda {
 	 * 
 	 * @param valor
 	 */
-	public static void calculaImposto(double valor) {
+	public static double calculaImposto(double valor) {
 	       //Declaração de Variáveis
 	       double imposto;
 	       double impostotot;
@@ -33,8 +33,8 @@ public class CalculoImpostoRenda {
 	                impostotot = 0.2;
 	       }
 	     
-	       //Saída de dados
-	       System.out.println("Valor em Dinheiro: R$" + (valor*impostotot));
+	       // Saída de dados
+	       return (valor*impostotot);
 	    }
 	
 	
