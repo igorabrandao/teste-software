@@ -56,6 +56,6 @@ public class CalculoImpostoRendaTest
 		expectedTax = CalculoImpostoRenda.calculaImposto(this.salary);
 		
 		// Check the result
-		assertEquals(this.expectedTax, (this.salary * expectedTax), 0.0);
+		assertEquals(this.expectedTax, (expectedTax+this.salary), 0.0);
 	}
 }
